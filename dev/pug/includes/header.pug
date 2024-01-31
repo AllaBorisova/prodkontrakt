@@ -1,0 +1,35 @@
+.bg-menu
+header.header
+	.container
+		.header__inner
+			a.logo(href="/index.html")
+				img(src="./img/logo.png" alt="")
+			nav.nav
+				ul.nav__list 
+					li.nav__list-item
+						a.nav__link(href="") каталог
+					li.nav__list-item
+						a.nav__link(href="") где купить
+					li.nav__list-item
+						a.nav__link(href="") новости и статьи
+					li.nav__list-item
+						a.nav__link(href="") контакты
+				.header__contacts
+					a.header__phone(href="tel:+7 928 229-78-08") +7 928 229-78-08
+					a.header__mail(href="mailto:pki.zoo-mir@yandex.ru") pki.zoo-mir@yandex.ru
+					.header__address 347041, Ростовская область, г. Белая Калитва, Совхозная, 52а
+					.header__socials.socials
+						a.socials__vk(href="" target="_blank") 
+						a.socials__youtube(href="" target="_blank") 
+			.search 
+				span.search__icon
+					+svg('search')
+				form.search__form(action="" method="get")
+					button.search__button(type="submit")
+						+svg('search')
+					input.search__input(type="text" value="" placeholder="Поиск") 
+			button.hamburger(type="button")
+				span
+				span
+				span
+				

@@ -1,0 +1,59 @@
+.search {
+  margin-right: 1rem;
+  .search-active & {
+    width: 100%;
+  }
+  &__icon {
+    @include flexcc;
+    @include wh(6.6rem);
+    cursor: pointer;
+    svg {
+      @include wh(2.4rem);
+    }
+    .search-active & {
+      display: none;
+    }
+  }
+  &__form {
+    width: 100%;
+    position: relative;
+    display: none;
+    .search-active & {
+      display: block;
+    }
+  }
+  &__button {
+    @include wh(6.6rem);
+    @include flexcc;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    svg {
+      @include wh(2.4rem);
+    }
+  }
+  &__input {
+    border-radius: 3.3rem;
+    background: #f7f7f7;
+    border: none;
+    box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+      -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+      -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+      -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+      -100px 359px 104px 0px rgba(0, 0, 0, 0);
+    height: 6.6rem;
+    padding-right: 9.6rem;
+    padding-left: 3rem;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    &::placeholder {
+      color: rgba(12, 12, 12, 0.3);
+    }
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+}

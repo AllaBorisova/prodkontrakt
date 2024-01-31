@@ -1,0 +1,129 @@
+.footer {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  @media (max-width: $breakpoint-tablet) {
+    // background: #fff;
+  }
+  &__inner {
+    border-radius: 1rem;
+    background: #fff;
+    padding: 4.6rem 13.7rem 6.5rem 4.8rem;
+  }
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__top {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @include flex-center-start;
+    gap: 1rem;
+    @media (max-width: $breakpoint-tablet) {
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+  &__logo {
+    max-width: 15.7rem;
+    margin-right: 13.3rem;
+    img {
+      display: block;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin-right: 0;
+      max-width: 100%;
+      max-width: 13.4rem;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .socials {
+      flex-wrap: wrap;
+      max-width: 8rem;
+      gap: 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 130%;
+    max-width: 21rem;
+    margin-right: 5rem;
+    @media (max-width: $breakpoint-tablet) {
+      margin-right: 0;
+      font-size: 1.6rem;
+      max-width: 15rem;
+    }
+  }
+  &__contacts {
+    max-width: 27rem;
+    margin-left: auto;
+  }
+  &__address {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 3rem;
+  }
+  &__mail {
+    display: block;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 1 0.2rem;
+    color: $color-text-dark;
+  }
+  &__phone {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+    color: $color-text-dark;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 15.3rem;
+    ul {
+      @include ul-clean;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      li {
+        a {
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: $color-text-dark;
+          text-transform: uppercase;
+          font-family: $font;
+        }
+      }
+    }
+  }
+}
+
+.socials {
+  @include flexcc;
+  gap: 1rem;
+  justify-content: flex-start;
+  a {
+    display: flex;
+    @include wh(6rem);
+    border-radius: 50%;
+    &:hover {
+    }
+  }
+  &__vk {
+    background: url(../img/vk.svg) center no-repeat #07f;
+  }
+  &__youtube {
+    background: url(../img/youtube.svg) center no-repeat #f40000;
+  }
+}
