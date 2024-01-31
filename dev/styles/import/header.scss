@@ -99,6 +99,9 @@
   }
 }
 .nav {
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
   .search-active & {
     display: none;
   }

@@ -1,5 +1,8 @@
 .search {
   margin-right: 1rem;
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: auto;
+  }
   .search-active & {
     width: 100%;
   }
