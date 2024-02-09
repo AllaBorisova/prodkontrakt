@@ -1,7 +1,7 @@
 .footer {
   margin-top: 5rem;
   padding-bottom: 5rem;
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: $breakpoint-tablet) {
     padding-bottom: 1.6rem;
   }
   &__inner {
@@ -11,7 +11,7 @@
     @media (max-width: 1440px) {
       padding-right: 6.3rem;
     }
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       padding: 3.2rem;
     }
   }
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
     }
   }
@@ -36,7 +36,7 @@
   &__logo {
     max-width: 15.7rem;
     margin-right: 13.3rem;
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       max-width: 7.8rem;
       margin-right: 0;
       margin-bottom: 3.2rem;
@@ -61,7 +61,7 @@
   &__contacts {
     max-width: 27rem;
     margin-left: auto;
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       max-width: 100%;
       margin-left: 0;
     }
@@ -96,7 +96,7 @@
   &__menu {
     display: flex;
     gap: 15.3rem;
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
       gap: 3rem;
       margin-bottom: 3.2rem;
@@ -124,7 +124,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 2.4rem;
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       margin-top: 3rem;
       font-size: 1.4rem;
     }
