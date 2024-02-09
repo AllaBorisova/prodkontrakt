@@ -115,6 +115,10 @@
           color: $color-text-dark;
           text-transform: uppercase;
           font-family: $font;
+          @include tr;
+          &:hover {
+            color: #ffa200;
+          }
         }
       }
     }

@@ -224,7 +224,7 @@ textarea {
       padding: 1.5rem 4rem;
       @include tr;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       border: 1px solid rgba(12, 12, 12, 0.1);
       background: #fff;
       color: $color-text-dark;
@@ -234,56 +234,15 @@ textarea {
       @include flexcc;
       &.active,
       &:hover {
-        background: #ff7a0e;
+        background: $color-primary;
         color: #fff;
-        border-color: #ff7a0e;
+        border-color: $color-primary;
       }
       @media (max-width: $breakpoint-tablet) {
       }
     }
   }
   > div {
-    p {
-      margin-bottom: 1rem;
-      @media (max-width: $breakpoint-mobile) {
-        margin-bottom: 0.8rem;
-      }
-    }
-    ul {
-      display: block;
-      li {
-        background: none;
-        padding: 0;
-        margin: 0;
-        font-weight: normal;
-        border: none;
-        color: $color-text-dark;
-        padding-left: 1.1rem;
-        margin-bottom: 1.5rem;
-        position: relative;
-        font-size: 1.8rem;
-        line-height: 2.5rem;
-
-        @media (max-width: $breakpoint-mobile) {
-          font-size: 1.4rem;
-          line-height: 1.2em;
-        }
-        &:not(:last-child) {
-          border: none;
-        }
-        &:before {
-          content: '';
-          display: block;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          background: $color-text-dark;
-          position: absolute;
-          top: 0.9rem;
-          left: 0px;
-        }
-      }
-    }
   }
 }
 
@@ -347,16 +306,22 @@ textarea {
 }
 .slick-prev {
   left: -3rem;
-  background: url(../img/arrow-left.svg) center no-repeat #fff;
+  background: #f7f7f7;
   &:hover {
     background-color: #ffa200;
+    svg g {
+      stroke: #f7f7f7;
+    }
   }
 }
 .slick-next {
   right: -3rem;
-  background: url(../img/arrow-right.svg) center no-repeat #fff;
+  background: #f7f7f7;
   &:hover {
     background-color: #ffa200;
+    svg g {
+      stroke: #f7f7f7;
+    }
   }
 }
 
@@ -418,7 +383,13 @@ textarea {
   border-radius: 1rem;
   width: auto;
   max-width: 44rem;
-  margin: 20px auto;
+  margin: 2rem auto;
+}
+.filter-popup {
+  position: relative;
+  width: auto;
+  max-width: 44rem;
+  margin: 2rem auto;
 }
 .popup {
   &__title {
@@ -428,13 +399,14 @@ textarea {
     font-family: $font;
     margin-bottom: 1.5rem;
   }
-  &__title {
+  &__text {
+    margin-bottom: 2rem;
   }
 }
 button.mfp-close {
   @include wh(2rem);
   border-radius: 50%;
-  background: #ff7a0e;
+  background: $color-primary;
   color: #fff;
   line-height: 2rem;
   @include flexcc;

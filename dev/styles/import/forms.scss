@@ -24,6 +24,7 @@
     font-size: 1.4rem;
     &-block {
       position: relative;
+      margin-bottom: 1rem;
     }
     &:focus {
       border-color: #ffa200;
@@ -39,7 +40,7 @@
   }
   &__textarea {
     &-block {
-      margin-top: 1rem;
+      margin-bottom: 1rem;
       position: relative;
     }
     padding: 1.5rem 2rem;

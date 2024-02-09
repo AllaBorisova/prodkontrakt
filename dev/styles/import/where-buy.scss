@@ -88,7 +88,7 @@
   }
   &__name {
     font-size: 2rem;
-    color: #0c0c0c;
+    color: $color-text-dark;
     font-family: $font;
     text-transform: uppercase;
   }
@@ -103,7 +103,7 @@
     color: #000;
     a {
       font-size: 1.4rem;
-      color: #0c0c0c;
+      color: $color-text-dark;
     }
   }
   &__logo {

@@ -34,25 +34,27 @@
   padding: 0;
   position: relative;
   z-index: 999;
-  width: 30px;
-  height: 13px;
+  width: 3rem;
+  height: 1.3rem;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.5rem;
   display: none;
   span {
     width: 100%;
     height: 1px;
-    background: #0c0c0c;
+    background: $color-text-dark;
     @include tr;
     &:nth-child(1) {
       .open-menu & {
         transform: rotate(45deg);
+        background: #ffa200;
       }
     }
     &:nth-child(3) {
       .open-menu & {
-        transform: rotate(-45deg) translate(4px, -4px);
+        transform: rotate(-45deg) translate(0.4rem, -0.4rem);
+        background: #ffa200;
       }
     }
     &:nth-child(2) {
@@ -183,7 +185,7 @@
   }
   &__link {
     font-family: $font;
-    color: #0c0c0c;
+    color: $color-text-dark;
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
