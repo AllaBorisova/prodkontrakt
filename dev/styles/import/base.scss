@@ -383,13 +383,13 @@ textarea {
   border-radius: 1rem;
   width: auto;
   max-width: 44rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
 }
 .filter-popup {
   position: relative;
   width: auto;
   max-width: 44rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
 }
 .popup {
   &__title {
@@ -403,7 +403,9 @@ textarea {
     margin-bottom: 2rem;
   }
 }
-button.mfp-close {
+button.mfp-close,
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
   @include wh(2rem);
   border-radius: 50%;
   background: $color-primary;
@@ -413,6 +415,7 @@ button.mfp-close {
   opacity: 1;
   font-size: 2rem;
   top: -3rem;
+  padding-right: 0;
 }
 .mfp-close:active {
   top: -2.9rem;

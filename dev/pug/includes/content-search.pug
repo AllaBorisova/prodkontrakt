@@ -21,23 +21,25 @@ main.main
 						.no-products__subtext Проверьте написание
 						.no-products__subtext Перефразируйте поисковый запрос
 				.page-search__counts Найдено: 3 результата
-				.page-search__result-block 
-					.h1 В каталоге
-					.catalog__items.catalog__items_four
-						- for (var x = 0; x < 8; x++)
-							+product-card('product.png', 'Сухой корм для собак «Ягнёнок и рис»', '')
-					.h1 БРЕНДЫ
-					.section-brands__items
-						a.section-brands__item(href="")
-							span.section-brands__premium Премиум-бренд
-							span.section-brands__logo 
-								img(src="./img/brand1.png" alt="")
-							span.section-brands__list 
-								span.section-brands__list-item Консервированные корма
-								span.section-brands__list-item Сухие корма для котят
-								span.section-brands__list-item Сухие корма для взрослых кошек
-								span.section-brands__list-item Сухие корма для пожелых кошек
-								span.section-brands__list-item Гигиенические наполнители
+				.page-search__result-section
+					.page-search__result-block
+						.h1 В каталоге
+						.catalog__items.catalog__items_four
+							- for (var x = 0; x < 8; x++)
+								+product-card('product.png', 'Сухой корм для собак «Ягнёнок и рис»', '')
+					.page-search__result-block
+						.h1 БРЕНДЫ
+						.section-brands__items.no-slider
+							a.section-brands__item(href="")
+								span.section-brands__premium Премиум-бренд
+								span.section-brands__logo 
+									img(src="./img/brand1.png" alt="")
+								span.section-brands__list 
+									span.section-brands__list-item Консервированные корма
+									span.section-brands__list-item Сухие корма для котят
+									span.section-brands__list-item Сухие корма для взрослых кошек
+									span.section-brands__list-item Сухие корма для пожелых кошек
+									span.section-brands__list-item Гигиенические наполнители
 						
 
 			

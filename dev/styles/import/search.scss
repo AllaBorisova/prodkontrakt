@@ -88,4 +88,9 @@
   &__counts {
     margin-bottom: 4.6rem;
   }
+  &__result-block {
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
 }
