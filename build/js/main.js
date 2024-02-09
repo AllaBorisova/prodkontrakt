@@ -79,7 +79,7 @@ jQuery(document).ready(function ($) {
     ],
   });
   $('.section__slider').slick({
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 300,
     slidesToShow: 4,
