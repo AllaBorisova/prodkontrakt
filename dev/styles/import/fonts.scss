@@ -21,3 +21,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Sweet Mavka Script';
+  src: url('../fonts/SweetMavkaScript.eot');
+  src: url('../fonts/SweetMavkaScript.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SweetMavkaScript.woff2') format('woff2'),
+    url('../fonts/SweetMavkaScript.woff') format('woff'),
+    url('../fonts/SweetMavkaScript.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,8 +1,8 @@
 .footer {
   margin-top: 5rem;
   padding-bottom: 5rem;
-  @media (max-width: $breakpoint-tablet) {
-    // background: #fff;
+  @media (max-width: $breakpoint-mobile) {
+    padding-bottom: 1.6rem;
   }
   &__inner {
     border-radius: 1rem;
@@ -11,11 +11,17 @@
     @media (max-width: 1440px) {
       padding-right: 6.3rem;
     }
+    @media (max-width: $breakpoint-mobile) {
+      padding: 3.2rem;
+    }
   }
   &__info {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+    }
   }
   &__top {
     padding-top: 5rem;
@@ -30,20 +36,13 @@
   &__logo {
     max-width: 15.7rem;
     margin-right: 13.3rem;
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 7.8rem;
+      margin-right: 0;
+      margin-bottom: 3.2rem;
+    }
     img {
       display: block;
-    }
-    @media (max-width: $breakpoint-tablet) {
-      margin-right: 0;
-      max-width: 100%;
-      max-width: 13.4rem;
-    }
-  }
-  @media (max-width: $breakpoint-tablet) {
-    .socials {
-      flex-wrap: wrap;
-      max-width: 8rem;
-      gap: 2rem;
     }
   }
 
@@ -62,6 +61,10 @@
   &__contacts {
     max-width: 27rem;
     margin-left: auto;
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
   &__address {
     font-size: 1.6rem;
@@ -76,7 +79,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 2.4rem;
-    margin-bottom: 1 0.2rem;
+    margin-bottom: 1.2rem;
     color: $color-text-dark;
   }
   &__phone {
@@ -87,11 +90,17 @@
     display: block;
     margin-bottom: 1rem;
     color: $color-text-dark;
+    font-family: $font;
   }
 
   &__menu {
     display: flex;
     gap: 15.3rem;
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 3.2rem;
+    }
     ul {
       @include ul-clean;
       display: flex;
@@ -110,6 +119,16 @@
       }
     }
   }
+  &__copyright {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    @media (max-width: $breakpoint-mobile) {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+    }
+  }
 }
 
 .socials {
@@ -120,13 +139,18 @@
     display: flex;
     @include wh(6rem);
     border-radius: 50%;
-    &:hover {
-    }
+    @include tr;
   }
   &__vk {
     background: url(../img/vk.svg) center no-repeat #07f;
+    &:hover {
+      background-color: #005bc3;
+    }
   }
   &__youtube {
     background: url(../img/youtube.svg) center no-repeat #f40000;
+    &:hover {
+      background-color: #d10000;
+    }
   }
 }

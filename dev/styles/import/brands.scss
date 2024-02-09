@@ -1,0 +1,105 @@
+.section-brand {
+  &__block {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1.6rem;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__img {
+    height: 60rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/cat-sleep.png);
+    @media (max-width: $breakpoint-mobile) {
+      height: 31rem;
+      padding: 1.6rem;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  &__logo {
+    height: 12.3rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5rem);
+    @include flexcc;
+    img {
+      max-height: 5.3rem;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      height: 6.6rem;
+      width: 100%;
+      img {
+        max-height: 2.8rem;
+      }
+    }
+  }
+  &__desc {
+    border-radius: 1rem;
+    background: #fff;
+    padding: 3rem;
+    padding-right: 6rem;
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1.6rem;
+      padding-right: 3rem;
+      padding-top: 3rem;
+    }
+  }
+  &__title {
+    font-size: 1.4rem;
+    line-height: normal;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  &__text {
+  }
+  &__video {
+    height: 60rem;
+    border-radius: 1rem;
+    position: relative;
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    @media (max-width: $breakpoint-mobile) {
+      height: 15.4rem;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 10.9rem;
+      height: 10.9rem;
+      border-radius: 50%;
+      background: url(../img/play.svg) center no-repeat #ffa200;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -5.4rem;
+      margin-left: -5.4rem;
+      @include tr;
+      @media (max-width: $breakpoint-mobile) {
+        @include wh(4.5rem);
+        background-size: 1rem;
+        margin-top: -2.25rem;
+        margin-left: -2.25rem;
+      }
+    }
+    &:hover {
+      &:before {
+        background-color: #ff9741;
+      }
+    }
+    &:active {
+      &:before {
+        background-color: #ec6a00;
+      }
+    }
+  }
+}

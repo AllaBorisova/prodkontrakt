@@ -1,12 +1,29 @@
-Fancybox.bind('[data-fancybox]', {});
+// Fancybox.bind('[data-fancybox]', {});
 
 jQuery(document).ready(function ($) {
-  // $('.tabs').lightTabs();
+  $('.tabs').lightTabs();
 
   $('[type=tel]').mask('+7 (999) 999-99-99');
 
   $('.section-faq__name').click(function () {
     $(this).parent().toggleClass('active');
+  });
+
+  $('.variants-item').click(function () {
+    $(this).parent().find('.variants-item').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.hamburger').click(function () {
+    $('.hamburger').toggleClass('is-active');
+    $('body').toggleClass('open-menu');
+  });
+  $('.filter__name').click(function () {
+    $(this).parent().toggleClass('open');
+  });
+
+  $('.open-popup-link').magnificPopup({
+    type: 'inline',
+    midClick: true,
   });
 
   // window.addEventListener('click', function (e) {
@@ -50,7 +67,8 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
+          arrows: false,
+          dots: false,
           centerMode: false,
           slidesToShow: 1,
           // prevArrow:

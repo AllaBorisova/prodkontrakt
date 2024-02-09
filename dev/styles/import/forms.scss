@@ -1,64 +1,78 @@
 .form {
-  max-width: 80rem;
-
   &__label {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     display: block;
     white-space: nowrap;
+    position: absolute;
+    top: 0.9rem;
+    left: 1.1rem;
+    padding: 0.2rem 2.6rem 0.2rem 0.9rem;
+    background: #fff;
+    @include tr;
+    pointer-events: none;
   }
-  &__block {
-    margin-bottom: 5rem;
-    @media (max-width: $breakpoint-tablet) {
-      margin-bottom: 3rem;
-    }
-    @media (max-width: $breakpoint-mobile) {
-      margin-bottom: 1.5rem;
-    }
-  }
+
   &__input {
-    border: none;
-    padding: 0 2.3rem;
-    height: 6.6rem;
+    border-radius: 0.5rem;
+    // border: 1px solid #ffa200;
+    border: 1px solid #f4f4f4;
+    background: #fff;
+    padding: 0 2rem;
+    height: 4rem;
     width: 100%;
     color: $color-text-dark;
-    border-radius: 2rem;
-    border: 1px solid rgba(63, 55, 64, 0.3);
-    background: #fff;
-    font-size: 2.2rem;
+    font-size: 1.4rem;
+    &-block {
+      position: relative;
+    }
+    &:focus {
+      border-color: #ffa200;
+    }
+    &:focus + .form__label {
+      top: -1rem;
+    }
     &::placeholder {
-      color: rgba(63, 55, 64, 0.4);
+      // color: rgba(63, 55, 64, 0.4);
     }
     @media (max-width: $breakpoint-mobile) {
-      // height: 4rem;
-      // font-size: 1.6rem;
-      border-radius: 1.5rem;
     }
   }
   &__textarea {
-    border: none;
-    padding: 1.7rem 2.3rem;
-    height: 38.8rem;
+    &-block {
+      margin-top: 1rem;
+      position: relative;
+    }
+    padding: 1.5rem 2rem;
+    height: 8.1rem;
     width: 100%;
     color: $color-text-dark;
-    border-radius: 2rem;
-    border: 1px solid rgba(63, 55, 64, 0.3);
+    border-radius: 0.5rem;
+    border: 1px solid #f4f4f4;
     background: #fff;
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     &::placeholder {
-      color: rgba(63, 55, 64, 0.4);
+      // color: rgba(63, 55, 64, 0.4);
+    }
+    &:focus {
+      border-color: #ffa200;
+    }
+    &:focus + .form__label {
+      top: -1rem;
     }
     @media (max-width: $breakpoint-mobile) {
-      height: 20rem;
-
-      border-radius: 1.5rem;
+      height: 8.1rem;
     }
   }
   &__submit {
-    background: none;
-    color: $color-primary;
-    border: none;
-    font-size: 2.4rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    // background: none;
+    // color: $color-primary;
+    // border: none;
+    // font-size: 2.4rem;
+    // margin-top: 1.5rem;
+  }
+  &__agree {
+    margin-top: 2rem;
   }
 }
 input::-webkit-outer-spin-button,
@@ -74,20 +88,28 @@ input[type='number'] {
 
 .custom-checkbox {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: flex-start;
+  .filter & {
+    gap: 1rem;
+  }
   &__checkbox {
     display: none;
   }
   &__span {
     position: relative;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border: 1px solid #000;
-    border-radius: 0px;
+    border-radius: 0.5rem;
     cursor: pointer;
     background: none;
     flex: none;
+    .filter & {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 0.4rem;
+    }
   }
   &__span,
   &__label {
@@ -95,13 +117,15 @@ input[type='number'] {
   }
   &__span {
     margin-top: 0.4rem;
+    .filter & {
+      margin-top: 0;
+    }
   }
   &__label {
-    color: $color-text-dark;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    color: #2c2c2c;
+    font-size: 1.4rem;
+    line-height: normal;
     cursor: pointer;
-
     a {
       color: $color-text-dark;
       text-decoration: underline;
@@ -110,16 +134,24 @@ input[type='number'] {
       }
     }
   }
+  &__checkbox:checked + &__span {
+    border-color: rgba(255, 122, 14, 1);
+  }
   &__checkbox:checked + &__span::before {
     content: '';
     display: block;
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 1rem;
-    height: 1rem;
-    // background: url(../img/checkbox.svg) center no-repeat;
-    background: #000;
+    top: -1px;
+    left: -1px;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../img/check.svg) center no-repeat;
+    background-size: cover;
+    border-color: rgba(255, 122, 14, 1);
+    .filter & {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
   }
 }
 
@@ -175,4 +207,67 @@ input[type='number'] {
       background: $color-second;
     }
   }
+}
+
+.select-custom {
+  position: relative;
+}
+
+.select-custom select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #f5f5f5;
+}
+.select-custom_white .select-selected {
+  background-color: #fff;
+}
+.select-selected:after {
+  position: absolute;
+  content: '';
+  top: 14px;
+  right: 10px;
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/angle.svg) center no-repeat;
+  @include tr;
+}
+
+.select-selected.select-arrow-active:after {
+  transform: rotate(-180deg);
+}
+
+.select-items div,
+.select-selected {
+  padding: 1rem 1.6rem;
+  border: 1px solid #e7e7e7;
+  border-top: none;
+  cursor: pointer;
+}
+.select-selected {
+  border-radius: 0.5rem;
+  border-top: 1px solid #e7e7e7;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #f5f5f5;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-custom_white .select-items {
+  background-color: #fff;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }

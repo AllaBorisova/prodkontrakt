@@ -1,4 +1,94 @@
 .news {
+  margin-bottom: 5rem;
+  @media (max-width: $breakpoint-mobile) {
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 3rem;
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.7rem;
+    }
+  }
+  &__item {
+  }
+  &__info {
+    height: 25rem;
+    border-radius: 1rem;
+    background: #fff;
+    @include flexcc;
+    position: relative;
+    margin-bottom: 3rem;
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 1.5rem;
+      height: 19.4rem;
+      padding: 0.8rem;
+    }
+  }
+  &__img {
+    max-height: 21rem;
+    @media (max-width: $breakpoint-mobile) {
+      max-height: 16rem;
+    }
+  }
+  &__date {
+    border-radius: 0.5rem;
+    background: #000;
+    display: inline-flex;
+    padding: 0rem 0.7rem;
+    height: 2rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #fff;
+    align-items: center;
+  }
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 130%;
+    display: block;
+    color: $color-text-dark;
+    @include tr;
+    &:hover {
+      color: #ffa200;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.news-detail {
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 5rem;
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+  &__img {
+    border-radius: 1rem;
+    background: #fff;
+    height: 60rem;
+    padding: 7rem;
+    @include flexcc;
+    @media (max-width: $breakpoint-mobile) {
+      height: 31rem;
+      padding: 1rem;
+    }
+  }
+  &__text {
+    max-width: 57rem;
+    p:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}
+/*.news {
   &_main {
     background: #ecedf5;
     padding-top: 3.8rem;
@@ -275,3 +365,4 @@
     }
   }
 }
+*/

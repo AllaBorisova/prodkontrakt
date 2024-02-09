@@ -1,0 +1,68 @@
+.section-caption {
+  margin: 0;
+  font-family: $font;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.h1 {
+  margin: 0;
+  font-family: $font;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  &_count {
+    font-size: 1.4rem;
+    font-family: $font-second;
+    text-transform: none;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 2.4rem;
+  }
+}
+.h2 {
+  margin: 0;
+  font-family: $font;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  position: relative;
+  display: flex;
+  // gap: 5.5rem;
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.6rem;
+  }
+  &__count {
+    width: 6rem;
+    @media (max-width: $breakpoint-mobile) {
+      width: auto;
+    }
+  }
+}
+.section-text {
+  p:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  &_padleft {
+    padding-left: 6rem;
+    @media (max-width: $breakpoint-mobile) {
+      padding-left: 0;
+    }
+  }
+}

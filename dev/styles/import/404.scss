@@ -1,0 +1,55 @@
+.section-404 {
+  &__block {
+    border-radius: 1rem;
+    background: url(../img/404-cat.png) center right no-repeat #dde0e7;
+    background-size: contain;
+    padding: 4.8rem;
+    padding-top: 11rem;
+    @media (max-width: $breakpoint-mobile) {
+      background: url(../img/404-cat-mobile.png) center bottom no-repeat #dde0e7;
+      padding: 1.6rem;
+      padding-top: 6.9rem;
+      padding-bottom: 25rem;
+    }
+  }
+  &__info {
+    max-width: 53rem;
+    @media (max-width: $breakpoint-mobile) {
+      text-align: center;
+    }
+  }
+  &__title {
+    font-size: 20rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-family: $font;
+    margin-bottom: 0.7rem;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 15rem;
+    }
+  }
+  &__subtitle {
+    font-family: $font-third;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 80%;
+    margin-bottom: 4.7rem;
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__text {
+    margin-bottom: 7.4rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+}

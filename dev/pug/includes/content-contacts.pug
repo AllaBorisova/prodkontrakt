@@ -1,0 +1,46 @@
+main.main
+	.container
+		.breadcrumbs 
+			ul 
+				li 
+					a Главная 
+				li контакты
+		h1.h1 КОНТАКТЫ
+		.contacts-map 
+			.contacts-map__info 
+				.contacts-map__name ООО «Продконтрактинвест»
+				.contacts-map__param Адрес
+				.contacts-map__text Россия, 347041<br>Ростовская область, г.Белая Калитва, ул.Совхозная 52а 
+				.contacts-map__param Телефон
+				.contacts-map__text 
+					a(href="tel:+7 928 229 78 08") +7 928 229 78 08
+					a(href="tel:+7 86383 2 79 42") +7 86383 2 79 42
+				.contacts-map__param Почта
+				.contacts-map__text
+					a(href="mailto:kamilla-kalitva@yandex.ru") kamilla-kalitva@yandex.ru
+					a(href="mailto:artem@kalitva.donpac.ru") artem@kalitva.donpac.ru
+					a(href="mailto:nata-kalitva@yandex.ru") nata-kalitva@yandex.ru
+			.contacts-map__img 
+				img(src="./img/contacts-map-with-icon.png" alt="")
+		.contacts-form 
+			.contacts-form__block 
+				.contacts-form__info
+					.contacts-form__name Есть вопрос?
+					.contacts-form__text Наш специалист свяжется с Вами в ближайшее время.
+				form.contacts-form__form 
+					.contacts-form__grid
+						.form__input-block
+							input.form__input(type="text" value="" name="")
+							label.form__label ФИО *
+						.form__input-block
+							input.form__input(type="tel" value="" name="")
+							label.form__label Телефон *
+						.form__input-block
+							input.form__input(type="email" value="" name="")
+							label.form__label Email *
+					.form__textarea-block
+						textarea.form__textarea
+						label.form__label Текст сообщения
+					.form__agree
+						+custom-checkbox('Я прочитал и принимаю условия Политики конфиденциальности и Правил обработки персональных данных')
+					button.button.button_full.form__submit.open-popup-link(type="submit" data-mfp-src="#thanks-popup") ОТПРАВИТЬ

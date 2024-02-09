@@ -12,6 +12,16 @@
     cursor: pointer;
     svg {
       @include wh(2.4rem);
+      circle,
+      path {
+        @include tr;
+      }
+    }
+    &:hover {
+      circle,
+      path {
+        stroke: rgba(255, 162, 0, 1) !important;
+      }
     }
     .search-active & {
       display: none;
@@ -21,7 +31,8 @@
     width: 100%;
     position: relative;
     display: none;
-    .search-active & {
+    .search-active &,
+    .page-search & {
       display: block;
     }
   }
@@ -35,6 +46,16 @@
     top: 0;
     svg {
       @include wh(2.4rem);
+      circle,
+      path {
+        @include tr;
+      }
+    }
+    &:hover {
+      circle,
+      path {
+        stroke: rgba(255, 162, 0, 1) !important;
+      }
     }
   }
   &__input {
@@ -58,5 +79,13 @@
     @media (max-width: $breakpoint-tablet) {
       width: 100%;
     }
+  }
+}
+.page-search {
+  &__block {
+    margin-bottom: 2rem;
+  }
+  &__counts {
+    margin-bottom: 4.6rem;
   }
 }

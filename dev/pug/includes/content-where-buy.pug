@@ -1,0 +1,150 @@
+main.main
+	.container
+		.breadcrumbs 
+			ul 
+				li 
+					a Главная 
+				li ГДЕ КУПИТЬ
+		h1.h1 ГДЕ КУПИТЬ
+		.tabs 
+			ul 
+				li ЗООМАГАЗИНЫ
+				li ИНТЕРНЕТ-МАГАЗИНЫ
+				li ДИСТРИБЬЮТОРЫ
+			div 
+				div 
+					.shops-map
+						.shops-map__columns 
+							.shops-map__list 
+								.shops-map__selects 
+									.select-custom 
+										select
+											option(value="0") Регион
+											option(value="1") Московская область
+											option(value="2") Московская область
+									.select-custom 
+										select
+											option(value="0") Город
+											option(value="1") Москва
+											option(value="2") Москва
+								.shops-map__results 
+									.shops-map__name Московская область
+									.shops-map__subname москва
+									.shops-map__result.shop-result
+										.shop-result__name ООО «Мишель»
+										.shop-result__param Адрес
+										.shop-result__text 347041, Ростовская область, г. Белая Калитва, Совхозная, 52а
+										.shop-result__param Телефон
+										.shop-result__text 
+											a(href="tel:+7 917 567 98 30") +7 917 567 98 30
+										.shop-result__param Почта
+										.shop-result__text 
+											a(href="mailto:annabra@mishelik.ru") annabra@mishelik.ru
+										button.show-map() Показать на карте
+									.shops-map__result.shop-result
+										.shop-result__name ООО «Зоостандарт»
+										.shop-result__param Адрес
+										.shop-result__text 347041, Ростовская область, г. Белая Калитва, Совхозная, 52а
+										.shop-result__param Телефон
+										.shop-result__text 
+											a(href="tel:+7 917 567 98 30") +7 917 567 98 30
+										.shop-result__param Почта
+										.shop-result__text 
+											a(href="mailto:annabra@mishelik.ru") annabra@mishelik.ru
+										button.show-map() Показать на карте
+
+							.shops-map__map
+								.shops-map__map-item
+									.shop-result__name ООО «Зоостандарт»
+									.shop-result__param Адрес
+									.shop-result__text 347041, Ростовская область, г. Белая Калитва, Совхозная, 52а
+									.shop-result__param Телефон
+									.shop-result__text 
+										a(href="tel:+7 917 567 98 30") +7 917 567 98 30
+									.shop-result__param Почта
+									.shop-result__text 
+										a(href="mailto:annabra@mishelik.ru") annabra@mishelik.ru
+									.shop-result__logo 
+										img(src="./img/logo.png" alt="")
+
+
+
+				div 
+					.shops-logos
+						.shops-logos__items 
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo1.jpg" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo2.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo3.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo4.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo5.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo6.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo7.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small(href="") В МАГАЗИН
+							.shops-logos__item 
+								.shops-logos__img 
+									img(src="./img/logo8.png" alt="")
+								.shops-logos__name ЗООМАГАЗИН
+								a.button.button_white.button_small.button_full(href="") В МАГАЗИН
+						.pagination.pagination_fifty
+							.pagination__pages 
+								a.pagination__left(href="")
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" transform="rotate(90 12 12)" stroke="#F48C37"/><path d="M13.5 15L10.5 12L13.5 9" stroke="#F48C37" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								.pagination__text 
+									.pagination__active-page 1
+									.pagination__divider /
+									.pagination__pages-count 15
+								a.pagination__right(href="")
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" transform="rotate(-90 12 12)" stroke="#F48C37"/><path d="M10.5 9L13.5 12L10.5 15" stroke="#F48C37" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							button.button.button_show-more() ПОКАЗАТЬ ЕЩЕ
+				div 
+					.distributors
+						.distributors__items 
+							- for (var x = 0; x < 12; x++)
+								.distributors__item 
+									.distributors__name ИП ДЕМИДЕНКО
+									.distributors__param Адрес
+									.distributors__text 347041, Ростовская область, г. Белая Калитва, Совхозная, 52а
+									.distributors__param Телефон
+									.distributors__text 
+										a(href="tel:+7 917 567 98 30") +7 917 567 98 30
+									.distributors__param Почта
+									.distributors__text 
+										a(href="mailto:annabra@mishelik.ru") annabra@mishelik.ru
+						.pagination.pagination_fifty
+							.pagination__pages 
+								a.pagination__left(href="")
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" transform="rotate(90 12 12)" stroke="#F48C37"/><path d="M13.5 15L10.5 12L13.5 9" stroke="#F48C37" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								.pagination__text 
+									.pagination__active-page 1
+									.pagination__divider /
+									.pagination__pages-count 15
+								a.pagination__right(href="")
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" transform="rotate(-90 12 12)" stroke="#F48C37"/><path d="M10.5 9L13.5 12L10.5 15" stroke="#F48C37" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							button.button.button_show-more() ПОКАЗАТЬ ЕЩЕ

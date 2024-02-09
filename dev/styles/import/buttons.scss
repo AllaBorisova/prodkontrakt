@@ -14,13 +14,71 @@
   font-weight: 700;
   line-height: normal;
   @include tr;
-  background: $color-primary;
+  background: #ff7a0e;
+  text-transform: uppercase;
   border-radius: 0.5rem;
+  @media (max-width: $breakpoint-mobile) {
+    height: 4.3rem;
+    width: 100%;
+    padding: 1.5rem;
+  }
   &:hover {
-    opacity: 0.8;
+    background: #ff9741;
+    color: #f7f7f7;
+  }
+  &:active {
+    background: #ec6a00;
+    color: #f7f7f7;
+  }
+
+  &_white {
+    width: 100%;
+    max-width: 32.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(12, 12, 12, 0.1);
+    background: #fff;
+    height: 4.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0c0c0c;
+    @media (max-width: $breakpoint-mobile) {
+      height: 4.3rem;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  &_reset {
+    height: 4rem;
+    border: 1px solid rgba(12, 12, 12, 0.1);
+    background: #fff;
+    color: #0c0c0c;
+    font-size: 1.4rem;
+  }
+  &_order {
+    width: 100%;
+    max-width: 27.3rem;
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 100%;
+    }
+  }
+  &_show-more {
+    height: 5.8rem;
+    font-size: 1.4rem;
+    width: 100%;
+    border: 1px solid rgba(12, 12, 12, 0.1);
+    background: #fff;
+    color: #000;
   }
   &_full {
     width: 100%;
+    max-width: 100%;
+  }
+  &_small {
+    font-size: 1.4rem;
+  }
+  &_to-order {
+    height: 4rem;
+    font-size: 1.4rem;
   }
 }
 .button-callback {

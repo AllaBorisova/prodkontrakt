@@ -5,9 +5,9 @@
   img {
     display: block;
   }
-  // @media (max-width: $breakpoint-tablet) {
-  //   max-width: 13.4rem;
-  // }
+  @media (max-width: $breakpoint-tablet) {
+    margin-right: 2rem;
+  }
   // @media (max-width: $breakpoint-mobile) {
   //   max-width: 11.3rem;
   // }
@@ -21,7 +21,7 @@
   z-index: 998;
   background: rgba(239, 239, 239, 0.9);
   display: none;
-  .open-menu & {
+  .open-menu-menu & {
     display: block;
     @media (max-width: $breakpoint-tablet) {
       display: none;
@@ -30,7 +30,7 @@
 }
 .hamburger {
   cursor: pointer;
-
+  background: none;
   padding: 0;
   position: relative;
   z-index: 999;
@@ -40,14 +40,41 @@
   flex-direction: column;
   gap: 5px;
   display: none;
+  span {
+    width: 100%;
+    height: 1px;
+    background: #0c0c0c;
+    @include tr;
+    &:nth-child(1) {
+      .open-menu & {
+        transform: rotate(45deg);
+      }
+    }
+    &:nth-child(3) {
+      .open-menu & {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+    }
+    &:nth-child(2) {
+      width: 50%;
+      .open-menu & {
+        display: none;
+      }
+    }
+  }
   @media (max-width: $breakpoint-tablet) {
     @include flexcc;
+    align-items: flex-start;
   }
 }
 .header {
   position: relative;
   padding-top: 2.1rem;
   padding-bottom: 1.7rem;
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 1.6rem;
+    padding-bottom: 2rem;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -55,7 +82,7 @@
     gap: 4.3rem;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
-      gap: 0;
+      gap: 0rem;
     }
   }
 
@@ -90,6 +117,15 @@
   &__contacts {
     font-family: $font-second;
     display: none;
+    @media (max-width: $breakpoint-tablet) {
+      .open-menu & {
+        display: block;
+        .socials {
+          display: flex;
+          margin-top: 6rem;
+        }
+      }
+    }
   }
   .socials {
     margin-left: auto;
@@ -101,6 +137,26 @@
 .nav {
   @media (max-width: $breakpoint-tablet) {
     display: none;
+    .open-menu & {
+      display: block;
+      width: 100%;
+
+      background: #f7f7f7;
+      width: calc(100% + 3.2rem);
+      position: absolute;
+      top: -1.6rem;
+      left: -1.6rem;
+      z-index: 998;
+      padding-left: 2.8rem;
+      padding-right: 2.8rem;
+      padding-top: 3.9rem;
+      padding-bottom: 6.4rem;
+      box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+        -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+        -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+        -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+        -100px 359px 104px 0px rgba(0, 0, 0, 0);
+    }
   }
   .search-active & {
     display: none;
@@ -115,6 +171,12 @@
     line-height: normal;
     text-transform: uppercase;
     color: $color-text-dark;
+    .open-menu & {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      margin-bottom: 12rem;
+    }
     &-item {
       font-family: $font;
     }
@@ -127,5 +189,12 @@
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+    @include tr;
+    .open-menu & {
+      font-size: 2.4rem;
+    }
+    &:hover {
+      color: #ffa200;
+    }
   }
 }

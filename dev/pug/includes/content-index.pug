@@ -2,21 +2,27 @@ main.main
 	.section-slider 
 		.container 
 			.section-slider__block 
-				.section-slider__slide(style="background-image:url(./img/slide.jpg)")
-					.section-slider__info 
-						.section-slider__title Полноценный рацион для собак и кошек
-						.section-slider__text Каждый питомец заслуживает корма, который отвечает его потребностям
-						a.button(href="") В КАТАЛОГ
-				.section-slider__slide(style="background-image:url(./img/slide.jpg)")
-					.section-slider__info 
-						.section-slider__title Полноценный рацион для собак и кошек
-						.section-slider__text Каждый питомец заслуживает корма, который отвечает его потребностям
-						a.button(href="") В КАТАЛОГ
-				.section-slider__slide(style="background-image:url(./img/slide.jpg)")
-					.section-slider__info 
-						.section-slider__title Полноценный рацион для собак и кошек
-						.section-slider__text Каждый питомец заслуживает корма, который отвечает его потребностям
-						a.button(href="") В КАТАЛОГ
+				.section-slider__slide
+					.section-slider__inner(style="background-image:url(./img/slide.jpg)")
+						img.section-slider__img(src="./img/slide.jpg" alt="")
+						.section-slider__info 
+							.section-slider__title Полноценный рацион для собак и кошек
+							.section-slider__text Каждый питомец заслуживает корма, который отвечает его потребностям
+							a.button(href="") В КАТАЛОГ
+				.section-slider__slide
+					.section-slider__inner(style="background-image:url(./img/slide.jpg)")
+						img.section-slider__img(src="./img/slide.jpg" alt="")
+						.section-slider__info 
+							.section-slider__title Полноценный рацион для собак и кошек
+							.section-slider__text Каждый питомец заслуживает корма, который отвечает его потребностям
+							a.button(href="") В КАТАЛОГ
+				.section-slider__slide
+					.section-slider__inner(style="background-image:url(./img/slide.jpg)")
+						img.section-slider__img(src="./img/slide.jpg" alt="")
+						.section-slider__info 
+							.section-slider__title Полноценный рацион для собак и кошек
+							.section-slider__text Каждый питомец заслуживает корма, который отвечает его потребностям
+							a.button(href="") В КАТАЛОГ
 	.section-categories 
 		.container 
 			.section-categories__items 
@@ -33,6 +39,7 @@ main.main
 	.section-about 
 		.container 
 			.section-about__block 
+				img.section-about__img(src="./img/about-img.jpg" alt="")
 				.section-about__info 
 					.section-about__subtitle О КОМПАНИИ
 					.section-about__title Компания «ПродКонтрактИнвест» - ведущий российский производитель консервированных кормов для домашних животных.
@@ -54,7 +61,7 @@ main.main
 					.section-advantages__text Продукция разработана с участием отечественных и западных специалистов. Имеет сертификаты качества.
 	.section-news 
 		.container 
-			.section-caption новости и статьи
+			.h1 новости и статьи
 			.section-news__items 
 				.section-news__item 
 					a.section-news__info(href="")
@@ -78,9 +85,10 @@ main.main
 					a.section-news__name(href="") Новый дизайн упаковки Ночной охотник 415 гр. 
 	.section-brands
 		.container 
-			.section-caption БРЕНДЫ
+			.h1 БРЕНДЫ
 			.section-brands__items
 				a.section-brands__item(href="")
+					span.section-brands__premium Премиум-бренд
 					span.section-brands__logo 
 						img(src="./img/brand1.png" alt="")
 					span.section-brands__list 
@@ -113,7 +121,7 @@ main.main
 						span.section-brands__list-item Зерновые лакомства для грызунов
 	.section-faq 
 		.container 
-			.section-caption ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+			.h1 ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
 			.section-faq__items 
 				.section-faq__item 
 					.section-faq__name Как мне перевести питомца на новый корм?
