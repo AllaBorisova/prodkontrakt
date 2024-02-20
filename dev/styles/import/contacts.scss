@@ -70,6 +70,7 @@
       a {
         font-size: 1.4rem;
         display: block;
+        @include hover;
       }
     }
   }

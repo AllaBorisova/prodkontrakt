@@ -12,8 +12,7 @@
       gap: 1.7rem;
     }
   }
-  &__item {
-  }
+
   &__info {
     height: 25rem;
     border-radius: 1rem;
@@ -54,8 +53,8 @@
     display: block;
     color: $color-text-dark;
     @include tr;
-    &:hover {
-      color: #ffa200;
+    .news__item:hover & {
+      color: $color-text-accent;
     }
     @media (max-width: $breakpoint-mobile) {
       font-size: 1.4rem;

@@ -39,9 +39,11 @@ main.main
 	.section-about 
 		.container 
 			.section-about__block 
-				img.section-about__img(src="./img/about-img.jpg" alt="")
+				//- img.section-about__img(src="./img/about-img.jpg" alt="")
 				.section-about__info 
 					.section-about__subtitle О КОМПАНИИ
+					img.section-about__img(src="./img/about-img-mobile.jpg" alt="")
+
 					.section-about__title Компания «ПродКонтрактИнвест» - ведущий российский производитель консервированных кормов для домашних животных.
 					.section-about__text Широкий ассортимент нашей продукции удовлетворит самого взыскательного заводчика.Корма нашей компании разработаны для здоровой жизни питомцев на каждом этапе его взросления.
 	.section-advantages 
@@ -90,7 +92,7 @@ main.main
 			.section-brands__items.section__slider
 				- for (var x = 0; x < 2; x++)
 					a.section-brands__item(href="")
-						span.section-brands__premium Премиум-бренд
+						//- span.section-brands__premium Премиум-бренд
 						span.section-brands__logo 
 							img(src="./img/brand1.png" alt="")
 						span.section-brands__list 

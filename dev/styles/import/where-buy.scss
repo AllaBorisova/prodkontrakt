@@ -125,6 +125,10 @@
   padding-left: 2.5rem;
   background: url(../img/map-pin.svg) left center no-repeat;
   margin-top: 2rem;
+  @include tr;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .distributors {
   &__items {

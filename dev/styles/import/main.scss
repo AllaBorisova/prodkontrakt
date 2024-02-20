@@ -109,13 +109,6 @@
     @media (max-width: $breakpoint-mobile) {
       padding: 0.7rem;
     }
-    &:hover {
-      box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
-        -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
-        -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
-        -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
-        -100px 359px 104px 0px rgba(0, 0, 0, 0);
-    }
     span {
       border-radius: 0.5rem;
       background: rgba(255, 255, 255, 0.01);
@@ -131,9 +124,20 @@
       font-weight: 400;
       line-height: normal;
       height: 5.1rem;
+      @include tr;
       @media (max-width: $breakpoint-mobile) {
         font-size: 1.6rem;
         height: 3.5rem;
+      }
+    }
+    &:hover {
+      box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+        -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+        -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+        -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+        -100px 359px 104px 0px rgba(0, 0, 0, 0);
+      span {
+        color: $color-text-accent;
       }
     }
   }
@@ -151,10 +155,12 @@
       margin-bottom: 3.2rem;
     }
   }
+
   &__block {
     height: 60rem;
     border-radius: 1rem;
-    background: url(../img/about-img.jpg) right top repeat-x;
+    background: url(../img/about-img.jpg) right top no-repeat;
+    background-size: cover;
     padding: 1rem;
     @media (max-width: $breakpoint-mobile) {
       height: auto;
@@ -473,7 +479,7 @@
       color: $color-text-dark;
       font-size: 1.4rem;
       line-height: 1.2;
-      @include tr;
+      @include tr-slow;
       @media (max-width: $breakpoint-tablet) {
         font-size: 1.2rem;
       }
@@ -510,7 +516,7 @@
     font-family: $font;
     position: relative;
     padding-right: 4rem;
-
+    @include tr;
     &:after {
       content: '+';
       @include wh(4rem);
@@ -523,6 +529,12 @@
       position: absolute;
       right: 0;
       top: -0.6rem;
+      @include tr;
+      .section-faq__name:hover & {
+        border-color: #fff;
+        color: #fff;
+        background: #f48c37;
+      }
       @media (max-width: $breakpoint-mobile) {
         border: none;
         @include wh(2rem);
@@ -532,6 +544,17 @@
     .active & {
       &:after {
         content: '-';
+      }
+    }
+    &:hover {
+      color: #f48c37;
+      // border-color: #fff;
+      // color: #fff;
+      // background: #f48c37;
+      &:after {
+        border-color: #fff;
+        color: #fff;
+        background: #f48c37;
       }
     }
     @media (max-width: $breakpoint-mobile) {

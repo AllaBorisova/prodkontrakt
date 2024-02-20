@@ -353,16 +353,29 @@ textarea {
       display: none;
     }
   }
-  &__left {
-    width: 4rem;
-    height: 4rem;
-    @include flexcc;
-  }
+  &__left,
   &__right {
-    width: 4rem;
-    height: 4rem;
+    @include wh(6rem);
     @include flexcc;
+    @include tr;
+    border-radius: 50%;
+    svg {
+      circle,
+      path {
+        @include tr;
+      }
+    }
+    &:hover {
+      background: $color-text-accent;
+      svg {
+        circle,
+        path {
+          stroke: #fff;
+        }
+      }
+    }
   }
+
   &__text {
     display: flex;
     justify-content: space-between;
