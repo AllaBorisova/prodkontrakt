@@ -1,6 +1,6 @@
 mixin product-card(imgsrc, name, price)
 	.catalog__item
-		a.catalog__img(style='background-image:url(./img/' + imgsrc +')')
+		a.catalog__img(style='background-image:url(./img/' + imgsrc +')' href="")
 		.catalog__desc
 			a.catalog__name(href="")= name
 			.catalog__variants.variants
@@ -23,7 +23,13 @@ mixin custom-checkbox(text)
 	label.custom-checkbox
 		input.custom-checkbox__checkbox(type="checkbox" name="")
 		span.custom-checkbox__span
-		span.custom-checkbox__label= text
+		span.custom-checkbox__label= text 
+		
+mixin custom-checkbox-agree(text)
+	label.custom-checkbox
+		input.custom-checkbox__checkbox(type="checkbox" name="")
+		span.custom-checkbox__span
+		span.custom-checkbox__label Я прочитал и принимаю условия <a href="">Политики конфиденциальности</a> и <a href="">Правил обработки персональных данных</a>
 //- mixin custom-checkbox_orange(text)
 //- 	label.custom-checkbox.custom-checkbox_orange
 //- 		input.custom-checkbox__checkbox(type="checkbox" name="")

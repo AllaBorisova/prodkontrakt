@@ -303,26 +303,30 @@ textarea {
   // opacity: 0.5;
   @include tr;
   border-radius: 50%;
+  background: #f7f7f7;
+  svg {
+    circle,
+    path,
+    g {
+      @include tr;
+    }
+  }
+  &:hover {
+    background-color: #ffa200;
+    svg {
+      circle,
+      path,
+      g {
+        stroke: #f7f7f7;
+      }
+    }
+  }
 }
 .slick-prev {
   left: -3rem;
-  background: #f7f7f7;
-  &:hover {
-    background-color: #ffa200;
-    svg g {
-      stroke: #f7f7f7;
-    }
-  }
 }
 .slick-next {
   right: -3rem;
-  background: #f7f7f7;
-  &:hover {
-    background-color: #ffa200;
-    svg g {
-      stroke: #f7f7f7;
-    }
-  }
 }
 
 .pagination {

@@ -12,6 +12,13 @@ main.main
 					button.search__button(type="submit")
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11.5" cy="11.5" r="9.5" stroke="#0C0C0C" stroke-width="1.5"/>  <path d="M18.5 18.5L22 22" stroke="#0C0C0C" stroke-width="1.5" stroke-linecap="round"/></svg>
 					input.search__input(type="text" value="Консервированные корма" placeholder="Поиск") 
+					.search__results 
+						.search__result 
+							a(href="") Консервированные корма с травами для кошек
+						.search__result 
+							a(href="") Консервированные корма для собак
+						.search__result 
+							a(href="") Консервированные корма
 			.page-search__results 
 				.no-products
 					.no-products__img
@@ -30,16 +37,14 @@ main.main
 					.page-search__result-block
 						.h1 БРЕНДЫ
 						.section-brands__items.no-slider
-							a.section-brands__item(href="")
-								span.section-brands__premium Премиум-бренд
+							.section-brands__item
 								span.section-brands__logo 
-									img(src="./img/brand1.png" alt="")
+									img(src="./img/brand4.png" alt="")
 								span.section-brands__list 
-									span.section-brands__list-item Консервированные корма
-									span.section-brands__list-item Сухие корма для котят
-									span.section-brands__list-item Сухие корма для взрослых кошек
-									span.section-brands__list-item Сухие корма для пожелых кошек
-									span.section-brands__list-item Гигиенические наполнители
+									a.section-brands__list-item(href="") Зерновые корма для птиц
+									a.section-brands__list-item(href="") Зерновые лакомства для птиц
+									a.section-brands__list-item(href="") Зерновые корма для грызунов
+									a.section-brands__list-item(href="") Зерновые лакомства для грызунов
 						
 
 			

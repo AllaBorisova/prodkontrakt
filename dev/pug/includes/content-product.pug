@@ -46,17 +46,19 @@ main.main
 				div
 					.calc 
 						.calc__column
+							label.form__label.form__label_static Вес животного (кг)
 							.select-custom.select-custom_white 
-								select
-									option(value="0") Вес животного (кг)
-									option(value="1") 1000
-									option(value="2") 2000
+								select(name="weight")
+									option(value="") Выберите значение веса
+									option(value="12") 12
+									option(value="14") 14
+							label.form__label.form__label_static Норма веса (кг)
 							.select-custom.select-custom_white 
-								select
-									option(value="0") Норма веса
-									option(value="1") 100
-									option(value="2") 200
-							button.button РАССЧИТАТЬ
+								select(name="normal")
+									option(value="") Выберите значение нормы
+									option(value="10") 10
+									option(value="12") 12
+							button.button.button-calc РАССЧИТАТЬ
 						.calc__results
 							.calc__title Дневная норма составляет: 
-							.calc__result 000 г/сутки
+							.calc__result 0 г/сутки

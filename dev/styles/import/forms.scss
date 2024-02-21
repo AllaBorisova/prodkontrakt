@@ -10,6 +10,14 @@
     background: #fff;
     @include tr;
     pointer-events: none;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    &_static {
+      position: static;
+      background: none;
+      padding: 0;
+    }
   }
 
   &__input {
@@ -249,6 +257,12 @@ input[type='number'] {
 .select-selected {
   border-radius: 0.5rem;
   border-top: 1px solid #e7e7e7;
+}
+.error .select-selected {
+  border-color: red;
+}
+.select-selected.select-arrow-active {
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .select-items {

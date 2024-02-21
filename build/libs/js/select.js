@@ -1,4 +1,4 @@
-var x, i, j, l, ll, selElmnt, a, b, c;
+let x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName('select-custom');
 l = x.length;
@@ -21,13 +21,15 @@ for (i = 0; i < l; i++) {
     c.addEventListener('click', function (e) {
       /* When an item is clicked, update the original select box,
         and the selected item: */
-      var y, i, k, s, h, sl, yl;
+      let y, i, k, s, h, sl, yl;
       s = this.parentNode.parentNode.getElementsByTagName('select')[0];
       sl = s.length;
       h = this.parentNode.previousSibling;
       for (i = 0; i < sl; i++) {
         if (s.options[i].innerHTML == this.innerHTML) {
           s.selectedIndex = i;
+          s.value = s.options[i].value;
+          s.dispatchEvent(new Event('change'));
           h.innerHTML = this.innerHTML;
           y = this.parentNode.getElementsByClassName('same-as-selected');
           yl = y.length;
@@ -56,7 +58,7 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x,
+  let x,
     y,
     i,
     xl,

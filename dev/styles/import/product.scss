@@ -80,11 +80,13 @@
   @include wh(5.8rem);
   background: url(../img/wb.png) center no-repeat;
   background-size: cover;
+  border-radius: 50%;
 }
 .icon-ozon {
   @include wh(5.8rem);
   background: url(../img/ozon.png) center no-repeat;
   background-size: cover;
+  border-radius: 50%;
 }
 .calc {
   display: grid;

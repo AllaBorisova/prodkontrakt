@@ -1,15 +1,35 @@
 .search {
   margin-right: 1rem;
+  width: 6.6rem;
+
+  &.show-results {
+    border-radius: 3.3rem 3.3rem 0 0;
+  }
   @media (max-width: $breakpoint-tablet) {
     margin-left: auto;
   }
   .search-active & {
+    // width: 100%;
+    background: #f7f7f7;
+    border-radius: 3.3rem;
     width: 100%;
+    box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+      -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+      -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+      -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+      -100px 359px 104px 0px rgba(0, 0, 0, 0);
   }
   &__icon {
     @include flexcc;
     @include wh(6.6rem);
     cursor: pointer;
+    position: absolute;
+    top: 0.1rem;
+    right: 1rem;
+    z-index: 3;
+    @media (max-width: $breakpoint-tablet) {
+      right: 4rem;
+    }
     svg {
       @include wh(2.4rem);
       circle,
@@ -28,12 +48,32 @@
     }
   }
   &__form {
-    width: 100%;
+    width: 6.6rem;
     position: relative;
-    display: none;
-    .search-active &,
+    // display: none;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    opacity: 0;
+    @include tr;
+
+    // background: #f7f7f7;
+    // border-radius: 3.3rem;
+    // box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+    //   -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+    //   -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+    //   -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+    //   -100px 359px 104px 0px rgba(0, 0, 0, 0);
+    .search-active & {
+      // display: block;
+      width: 100%;
+      overflow: visible;
+      opacity: 1;
+      margin-left: auto;
+    }
     .page-search & {
-      display: block;
+      opacity: 1;
+      overflow: visible;
+      width: 100%;
     }
   }
   &__button {
@@ -44,6 +84,8 @@
     position: absolute;
     right: 0;
     top: 0;
+    padding: 0;
+    z-index: 7;
     svg {
       @include wh(2.4rem);
       circle,
@@ -60,24 +102,69 @@
   }
   &__input {
     border-radius: 3.3rem;
-    background: #f7f7f7;
     border: none;
-    box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
-      -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
-      -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
-      -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
-      -100px 359px 104px 0px rgba(0, 0, 0, 0);
+    background: #f7f7f7;
+
+    // box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+    //   -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+    //   -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+    //   -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+    //   -100px 359px 104px 0px rgba(0, 0, 0, 0);
+    position: relative;
+    z-index: 6;
     height: 6.6rem;
     padding-right: 9.6rem;
     padding-left: 3rem;
     width: 100%;
     font-size: 2rem;
     font-weight: 500;
+    transition: width 0.5s ease;
+    .show-results & {
+      border-radius: 3.3rem 3.3rem 0 0;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      padding-right: 7.6rem;
+    }
     &::placeholder {
       color: rgba(12, 12, 12, 0.3);
     }
     @media (max-width: $breakpoint-tablet) {
       width: 100%;
+    }
+  }
+  &__results {
+    position: relative;
+    // border-top: 1px solid rgba(12, 12, 12, 0.1);
+    position: absolute;
+    padding: 3rem;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0c0c0c;
+    display: none;
+    background: #f7f7f7;
+    border-radius: 0 0 3.3rem 3.3rem;
+    z-index: 5;
+    width: 100%;
+    box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
+      -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
+      -36px 129px 80px 0px rgba(0, 0, 0, 0.05),
+      -64px 229px 95px 0px rgba(0, 0, 0, 0.01),
+      -100px 359px 104px 0px rgba(0, 0, 0, 0);
+
+    .show-results & {
+      display: flex;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      border-top: 1px solid rgba(12, 12, 12, 0.1);
+    }
+    a {
+      @include hover;
     }
   }
 }

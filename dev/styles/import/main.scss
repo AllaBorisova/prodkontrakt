@@ -327,6 +327,8 @@
     }
   }
   &__item {
+    @include tr;
+
     @media (max-width: $breakpoint-tablet) {
       max-width: 25.4rem;
       flex: none;
@@ -339,6 +341,10 @@
     @include flexcc;
     position: relative;
     margin-bottom: 3rem;
+    @include tr;
+    .section-news__item:hover & {
+      box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
     @media (max-width: $breakpoint-tablet) {
       margin-bottom: 1.5rem;
       height: 19.4rem;
@@ -372,6 +378,9 @@
     display: block;
     color: $color-text-dark;
     @include tr;
+    .section-news__item:hover & {
+      color: $color-text-accent;
+    }
     &:hover {
       color: #ffa200;
     }
@@ -391,6 +400,7 @@
   .slick-slide {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    padding-bottom: 1rem;
   }
   &__items.no-slider {
     display: grid;
@@ -409,8 +419,10 @@
     position: relative;
     @include tr;
     min-height: 31.7rem;
+    cursor: pointer;
 
     &:hover {
+      box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
       // box-shadow: -4px 14px 33px 0px rgba(0, 0, 0, 0.1),
       //   -16px 57px 60px 0px rgba(0, 0, 0, 0.09),
       //   -36px 129px 80px 0px rgba(0, 0, 0, 0.05),

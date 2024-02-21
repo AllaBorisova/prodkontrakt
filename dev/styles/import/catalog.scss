@@ -94,6 +94,10 @@
     color: $color-text-dark;
     margin-bottom: 1rem;
     display: block;
+    @include tr;
+    &:hover {
+      color: $color-text-accent;
+    }
   }
   &__desc {
     padding: 2rem;
@@ -144,7 +148,7 @@
       .open & {
         transform: rotate(-180deg);
         path {
-          stroke: #ffa200;
+          stroke: $color-text-accent;
         }
       }
     }
@@ -159,10 +163,15 @@
     gap: 1rem;
   }
   &__info {
-    padding: 2rem;
-    display: none;
+    padding: 0 2rem;
+    // display: none;
+    height: 0px;
+    @include tr-slow;
+    overflow: hidden;
     .open & {
-      display: block;
+      // display: block;
+      padding: 1rem 2rem 3rem 2rem;
+      height: auto;
     }
   }
   &__option:not(:last-child) {
@@ -197,6 +206,9 @@
       color: #fff;
       background: $color-text-dark;
     }
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 .catalog-categories {
@@ -215,9 +227,10 @@
     display: flex;
     align-items: flex-end;
     padding: 1rem;
-    background-position: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    color: #f7f7f7;
     @include tr;
     &:hover {
       box-shadow: -4px 14px 33px 0 rgba(0, 0, 0, 0.1),
@@ -225,6 +238,7 @@
         -36px 129px 80px 0 rgba(0, 0, 0, 0.05),
         -64px 229px 95px 0 rgba(0, 0, 0, 0.01),
         -100px 359px 104px 0 rgba(0, 0, 0, 0);
+      color: $color-text-accent;
     }
     @media (max-width: $breakpoint-mobile) {
       padding: 0.8rem;
@@ -241,7 +255,7 @@
     font-style: normal;
     font-weight: 400;
     font-family: $font;
-    color: #f7f7f7;
+    @include tr;
     width: 100%;
     @media (max-width: $breakpoint-mobile) {
       font-size: 1.6rem;
