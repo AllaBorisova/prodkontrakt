@@ -26,13 +26,27 @@ jQuery(document).ready(function ($) {
 
   //filter toggle
   $('.filter__name').click(function () {
-    $(this).parent().toggleClass('open');
+    if ($(this).parent().hasClass('open')) {
+      $(this).parent().removeClass('open');
+      $(this).parent().find('.filter__info').slideUp(500);
+    } else {
+      $(this).parent().addClass('open');
+      $(this).parent().find('.filter__info').slideDown(500);
+    }
   });
 
   //popup
   $('.open-popup-link').magnificPopup({
     type: 'inline',
     midClick: true,
+    mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+    zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+    },
   });
 
   // calc
@@ -68,8 +82,10 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  //search results
   $('.header .search__input').on('keyup', function () {
     $('.header .search').addClass('show-results');
+    // $('.search__results').toggle();
   });
   // window.addEventListener('click', function (e) {
   //   if (!menu.contains(e.target) && !button.contains(e.target)) {
@@ -93,6 +109,7 @@ jQuery(document).ready(function ($) {
   // });
   $('.search__icon').click(function (e) {
     $('.header').addClass('search-active');
+    $('.header .search__input').focus();
   });
   $(document).mouseup(function (e) {
     const container = $('.search');

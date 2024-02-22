@@ -12,6 +12,12 @@
       gap: 1.7rem;
     }
   }
+  // &__item {
+  //   @include tr;
+  //   .news__item:hover & {
+  //     box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  //   }
+  // }
 
   &__info {
     height: 25rem;
@@ -20,6 +26,10 @@
     @include flexcc;
     position: relative;
     margin-bottom: 3rem;
+    @include tr;
+    .news__item:hover & {
+      box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
     @media (max-width: $breakpoint-mobile) {
       margin-bottom: 1.5rem;
       height: 19.4rem;

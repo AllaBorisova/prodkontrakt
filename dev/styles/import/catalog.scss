@@ -164,14 +164,15 @@
   }
   &__info {
     padding: 0 2rem;
-    // display: none;
-    height: 0px;
-    @include tr-slow;
-    overflow: hidden;
+    display: none;
+    padding: 1rem 2rem 3rem 2rem;
+    // height: 0px;
+    // @include tr-slow;
+    // overflow: hidden;
     .open & {
       // display: block;
-      padding: 1rem 2rem 3rem 2rem;
-      height: auto;
+      // padding: 1rem 2rem 3rem 2rem;
+      // height: auto;
     }
   }
   &__option:not(:last-child) {

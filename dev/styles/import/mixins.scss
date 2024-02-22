@@ -1,8 +1,8 @@
 @mixin tr {
-  transition: all 0.25s ease;
+  transition: all 0.5s linear;
 }
 @mixin tr-slow {
-  transition: all 0.5s ease;
+  transition: all 0.5s linear;
 }
 @mixin bg-img {
   background-repeat: no-repeat;

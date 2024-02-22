@@ -419,7 +419,7 @@
     position: relative;
     @include tr;
     min-height: 31.7rem;
-    cursor: pointer;
+    // cursor: pointer;
 
     &:hover {
       box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -579,16 +579,21 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
-    padding-bottom: 2rem;
-    padding-top: 3rem;
-    display: none;
+
+    @include tr-slow;
+    // display: none;
+    height: 0px;
+    overflow: hidden;
     p {
       &:not(:last-child) {
         margin-bottom: 2rem;
       }
     }
     .active & {
-      display: block;
+      height: auto;
+      padding-bottom: 2rem;
+      padding-top: 3rem;
+      // display: block;
     }
     @media (max-width: $breakpoint-mobile) {
       padding-top: 0.8rem;

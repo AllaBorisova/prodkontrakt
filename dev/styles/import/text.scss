@@ -52,19 +52,27 @@
     width: 6rem;
     @media (max-width: $breakpoint-mobile) {
       width: auto;
+      font-size: 2.4rem;
     }
   }
 }
 .section-text {
   .h1 + .h2 {
-    margin-top: -2rem;
+    margin-top: 0rem;
   }
   .h2 {
     margin-top: 3.8rem;
     margin-bottom: 2rem;
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 1rem;
+      margin-top: 1.8rem;
+    }
   }
   p:not(:last-child) {
     margin-bottom: 1.8rem;
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 1.9rem;
+    }
   }
   &_padleft {
     padding-left: 6rem;
