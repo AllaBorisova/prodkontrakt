@@ -9,7 +9,14 @@ jQuery(document).ready(function ($) {
 
   //faq toggle
   $('.section-faq__name').click(function () {
-    $(this).parent().toggleClass('active');
+    // $(this).parent().toggleClass('active');
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(this).parent().find('.section-faq__text').slideUp(500);
+    } else {
+      $(this).parent().addClass('active');
+      $(this).parent().find('.section-faq__text').slideDown(500);
+    }
   });
 
   //variants of weight

@@ -9,7 +9,14 @@ jQuery(document).ready(function ($) {
 
   //faq toggle
   $('.section-faq__name').click(function () {
-    $(this).parent().toggleClass('active');
+    // $(this).parent().toggleClass('active');
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(this).parent().find('.section-faq__text').slideUp(300);
+    } else {
+      $(this).parent().addClass('active');
+      $(this).parent().find('.section-faq__text').slideDown(300);
+    }
   });
 
   //variants of weight
@@ -28,10 +35,10 @@ jQuery(document).ready(function ($) {
   $('.filter__name').click(function () {
     if ($(this).parent().hasClass('open')) {
       $(this).parent().removeClass('open');
-      $(this).parent().find('.filter__info').slideUp(500);
+      $(this).parent().find('.filter__info').slideUp(300);
     } else {
       $(this).parent().addClass('open');
-      $(this).parent().find('.filter__info').slideDown(500);
+      $(this).parent().find('.filter__info').slideDown(300);
     }
   });
 
@@ -39,13 +46,11 @@ jQuery(document).ready(function ($) {
   $('.open-popup-link').magnificPopup({
     type: 'inline',
     midClick: true,
-    mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-
+    mainClass: 'mfp-with-zoom',
     zoom: {
-      enabled: true, // By default it's false, so don't forget to enable it
-
-      duration: 300, // duration of the effect, in milliseconds
-      easing: 'ease-in-out', // CSS transition easing function
+      enabled: true,
+      duration: 300,
+      easing: 'ease-in-out',
     },
   });
 
@@ -87,26 +92,7 @@ jQuery(document).ready(function ($) {
     $('.header .search').addClass('show-results');
     // $('.search__results').toggle();
   });
-  // window.addEventListener('click', function (e) {
-  //   if (!menu.contains(e.target) && !button.contains(e.target)) {
-  //     // Ниже код, который нужно выполнить при срабатывании события.
-  //     menu.classList.add('hide');
-  //   }
-  // });
-  // $(document).mouseup(function (e) {
-  //   const container = $('.nav-menu');
-  //   if (!container.is(e.target) && container.has(e.target).length === 0) {
-  //     $('.sub-menu-link').removeClass('open');
-  //     if (!$('.hamburger').hasClass('is-active')) {
-  //       $('body').removeClass('open-menu');
-  //     }
-  //   }
-  // });
 
-  // $('.hamburger').click(function () {
-  //   $('.hamburger').toggleClass('is-active');
-  //   $('body').toggleClass('open-menu');
-  // });
   $('.search__icon').click(function (e) {
     $('.header').addClass('search-active');
     $('.header .search__input').focus();
